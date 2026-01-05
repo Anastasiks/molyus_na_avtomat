@@ -4,9 +4,10 @@ class Battle:
         self.enemy = enemy
 
     def start(self):
+
         with open("battle_log.txt", "a", encoding="utf-8") as log:
             log.write("=== НАЧАЛО БИТВЫ ===\n")
-
+            print("=== НАЧАЛО БИТВЫ ===\n")
 
             while self.human.is_alive and self.enemy.is_alive:
                 self.human.attack(self.enemy, log)

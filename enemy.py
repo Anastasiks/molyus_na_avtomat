@@ -1,6 +1,8 @@
+
+import random
 class Enemy:
     def __init__(self):
-        self.hp = 80
+        self.hp = random.randint(20, 80)
         self.damage = 15
 
     @property
@@ -13,5 +15,7 @@ class Enemy:
             self.hp = 0
 
     def attack(self, human, log):
-        human.take_damage(self.damage)
-        log.write(f"Враг ударил {human.name} на {self.damage} урона\n")
+        dam = (random.randint(0, self.damage))
+        human.take_damage(dam)
+        log.write(f"Враг ударил {human.name} на {dam} урона\n")
+        print(f"Враг ударил {human.name} на {dam} урона\n")

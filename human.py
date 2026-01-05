@@ -1,3 +1,4 @@
+import random
 class Human:
     def __init__(self, name):
         self.name = name
@@ -15,5 +16,7 @@ class Human:
             self.hp = 0
 
     def attack(self, enemy, log):
-        enemy.take_damage(self.damage)
-        log.write(f"{self.name} ударил врага на {self.damage} урона\n")
+        damag = (random.randint(0, self.damage))
+        enemy.take_damage(damag)
+        log.write(f"{self.name} ударил врага на {damag} урона\n")
+        print(f"{self.name} ударил врага на {damag} урона\n")
