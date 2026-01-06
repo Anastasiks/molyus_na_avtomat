@@ -18,5 +18,5 @@ class Human:
     def attack(self, enemy, log):
         damag = (random.randint(0, self.damage))
         enemy.take_damage(damag)
-        log.write(f"{self.name} ударил врага на {damag} урона\n")
-        print(f"{self.name} ударил врага на {damag} урона\n")
+        log.write(f"{self.name} ударил {enemy.name} на {damag} урона\n")
+        print(f"{self.name} ударил {enemy.name} на {damag} урона\n")
